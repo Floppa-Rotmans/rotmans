@@ -127,3 +127,74 @@ nav a:hover{
   color: #000; /* Текст черным */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Легкое свечение */
   transform: scale(1.05); /* Кнопка чуть-чуть увеличивается */
+  /* ---------- MOBILE MENU ---------- */
+
+.menu-button{
+
+font-size:34px;
+
+cursor:pointer;
+
+user-select:none;
+
+z-index:1001;
+
+}
+
+#menu{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:280px;
+
+height:100vh;
+
+background:rgba(5,5,5,.96);
+
+backdrop-filter:blur(20px);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:30px;
+
+transition:.5s;
+
+}
+
+#menu.active{
+
+right:0;
+
+}
+
+#menu a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+transition:.3s;
+
+}
+
+#menu a:hover{
+
+color:#bbbbbb;
+
+transform:translateX(8px);
+
+}
