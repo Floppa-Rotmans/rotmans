@@ -1,314 +1,310 @@
-/* ==========================================
-   ROTMANS v3
-   Part 1
-========================================== */
+/* ===================================
+   ROTMANS v4
+   Mobile First
+=================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap');
 
+/* ===== RESET ===== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
 
-background:#050505;
-color:#fff;
+    background:#050505;
+    color:#ffffff;
 
-font-family:'Inter',sans-serif;
+    font-family:'Inter',sans-serif;
 
-overflow-x:hidden;
+    overflow-x:hidden;
 
 }
 
-/* ===========================
-   BACKGROUND
-=========================== */
+/* ===== BACKGROUND ===== */
 
 body::before{
 
-content:"";
+    content:"";
 
-position:fixed;
+    position:fixed;
 
-top:-250px;
-right:-200px;
+    width:500px;
+    height:500px;
 
-width:750px;
-height:750px;
+    top:-180px;
+    right:-170px;
 
-border-radius:50%;
+    border-radius:50%;
 
-background:
-radial-gradient(circle,
-rgba(255,255,255,.10),
-transparent 70%);
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.08),
+    transparent 70%);
 
-filter:blur(12px);
+    filter:blur(15px);
 
-z-index:-2;
-
-animation:moonFloat 10s ease-in-out infinite;
+    z-index:-2;
 
 }
 
 body::after{
 
-content:"";
+    content:"";
 
-position:fixed;
+    position:fixed;
 
-inset:0;
+    inset:0;
 
-background:
-radial-gradient(circle,
-transparent 45%,
-rgba(0,0,0,.75));
+    background:
+    radial-gradient(circle,
+    transparent 35%,
+    rgba(0,0,0,.75));
 
-pointer-events:none;
+    pointer-events:none;
 
-z-index:-1;
+    z-index:-1;
 
 }
 
-/* ===========================
-   HEADER
-=========================== */
+/* ===== HEADER ===== */
 
 .header{
 
-position:fixed;
+    position:fixed;
 
-top:0;
-left:0;
+    top:0;
+    left:0;
 
-width:100%;
+    width:100%;
 
-padding:24px 8%;
+    height:78px;
 
-display:flex;
+    padding:0 22px;
 
-justify-content:space-between;
+    display:flex;
 
-align-items:center;
+    justify-content:space-between;
 
-backdrop-filter:blur(16px);
+    align-items:center;
 
-background:rgba(5,5,5,.45);
+    background:rgba(5,5,5,.55);
 
-border-bottom:1px solid rgba(255,255,255,.06);
+    backdrop-filter:blur(18px);
 
-z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    z-index:999;
 
 }
 
 .logo{
 
-font-family:"Cinzel",serif;
+    color:white;
 
-font-size:34px;
+    text-decoration:none;
 
-letter-spacing:8px;
+    font-family:"Cinzel",serif;
 
-text-decoration:none;
+    font-size:24px;
 
-color:white;
-
-transition:.35s;
+    letter-spacing:5px;
 
 }
 
-.logo:hover{
+/* ===== BURGER ===== */
 
-color:#8d1018;
+.burger{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    z-index:1001;
 
 }
+
+/* ===== MENU ===== */
 
 .nav{
 
-display:flex;
+    position:fixed;
 
-gap:34px;
+    top:0;
+    right:-100%;
 
-align-items:center;
+    width:100%;
+
+    height:100vh;
+
+    background:#050505;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    transition:.45s;
+
+}
+
+.nav.active{
+
+    right:0;
 
 }
 
 .nav a{
 
-text-decoration:none;
+    text-decoration:none;
 
-color:white;
+    color:white;
 
-font-size:14px;
+    font-size:22px;
 
-letter-spacing:2px;
-
-opacity:.75;
-
-transition:.35s;
+    letter-spacing:4px;
 
 }
 
-.nav a:hover{
+#langBtn{
 
-opacity:1;
+    margin-top:20px;
 
-color:#8d1018;
+    background:none;
 
-}
+    border:1px solid rgba(255,255,255,.2);
 
-.lang-btn{
+    color:white;
 
-background:none;
-
-border:1px solid rgba(255,255,255,.15);
-
-color:white;
-
-padding:12px 18px;
-
-cursor:pointer;
-
-transition:.35s;
+    padding:14px 28px;
 
 }
 
-.lang-btn:hover{
-
-background:white;
-
-color:black;
-
-}
-
-/* ===========================
-   HERO
-=========================== */
+/* ===== HERO ===== */
 
 .hero{
 
-min-height:100vh;
+    min-height:100vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-text-align:center;
+    text-align:center;
 
-padding:120px 30px 80px;
+    padding:120px 25px 60px;
 
 }
 
 .hero-content{
 
-max-width:900px;
+    width:100%;
 
 }
 
-.hero-top{
+.hero-subtitle{
 
-display:block;
+    display:block;
 
-font-size:14px;
+    color:#8d1018;
 
-letter-spacing:8px;
+    letter-spacing:6px;
 
-color:#8d1018;
+    font-size:13px;
 
-margin-bottom:18px;
+    margin-bottom:18px;
 
 }
 
 .hero h1{
 
-font-family:"Cinzel",serif;
+    font-family:"Cinzel",serif;
 
-font-size:92px;
+    font-size:54px;
 
-line-height:1.05;
+    line-height:1.05;
 
-letter-spacing:4px;
-
-margin-bottom:28px;
+    margin-bottom:25px;
 
 }
 
 .hero p{
 
-font-size:20px;
+    color:#9c9c9c;
 
-color:#a5a5a5;
+    font-size:17px;
 
-max-width:700px;
+    line-height:1.7;
 
-margin:auto;
+    max-width:320px;
 
-line-height:1.8;
-
-margin-bottom:55px;
+    margin:0 auto 45px;
 
 }
 
-.hero-btn{
+.hero-button{
 
-display:inline-block;
+    display:block;
 
-padding:18px 55px;
+    width:100%;
 
-text-decoration:none;
+    max-width:320px;
 
-color:white;
+    margin:auto;
 
-border:1px solid rgba(255,255,255,.2);
+    text-decoration:none;
 
-letter-spacing:4px;
+    color:white;
 
-transition:.4s;
+    border:1px solid rgba(255,255,255,.2);
 
-}
+    padding:18px 0;
 
-.hero-btn:hover{
+    letter-spacing:3px;
 
-background:white;
-
-color:black;
-
-transform:translateY(-4px);
-
-box-shadow:0 15px 40px rgba(255,255,255,.15);
+    transition:.35s;
 
 }
 
-/* ===========================
-   ANIMATION
-=========================== */
+.hero-button:hover{
 
-@keyframes moonFloat{
+    background:white;
 
-0%{
-
-transform:translateY(0px);
+    color:black;
 
 }
 
-50%{
+.scroll{
 
-transform:translateY(30px);
+    margin-top:60px;
 
-}
+    font-size:12px;
 
-100%{
+    letter-spacing:5px;
 
-transform:translateY(0px);
-
-}
+    color:#777;
 
 }
