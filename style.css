@@ -405,4 +405,24 @@ transform:scale(.97);
 
 }
 
+}.logo img{
+
+height:56px;
+
+width:auto;
+
+display:block;
+
+transition:.35s ease;
+
+filter:drop-shadow(0 0 8px rgba(141,16,24,.15));
+
+}
+
+.logo img:hover{
+
+transform:scale(1.05);
+
+filter:drop-shadow(0 0 18px rgba(141,16,24,.45));
+
 }
