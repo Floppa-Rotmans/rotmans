@@ -108,4 +108,16 @@ lang.addEventListener("click", () => {
 
     alert("Language system will be added in ROTMANS v5.");
 
+});// ---------- SPLASH ----------
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document
+            .getElementById("loader")
+            .classList.add("loader-hide");
+
+    },1800);
+
 });
