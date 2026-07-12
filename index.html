@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,15 +16,15 @@
 
     <header class="header">
 
-        <div class="logo">
+        <a href="#hero" class="logo">
             ROTMANS
-        </div>
+        </a>
 
-        <div class="menu-button" id="menuButton">
+        <button class="menu-toggle" id="menuToggle">
             ☰
-        </div>
+        </button>
 
-        <nav id="menu">
+        <nav class="navigation" id="navigation">
 
             <a href="#hero">HOME</a>
             <a href="#story">STORY</a>
@@ -33,7 +33,7 @@
             <a href="#gallery">GALLERY</a>
             <a href="#quotes">QUOTES</a>
 
-            <button id="lang">
+            <button class="lang-btn" id="langBtn">
                 RU | EN
             </button>
 
@@ -43,83 +43,127 @@
 
     <!-- HERO -->
 
-    <section class="hero fade-in-block" id="hero">
+    <section class="hero" id="hero">
 
-        <h1 class="main-title">
-            THE LAST UCHIHA
-        </h1>
+        <div class="hero-content">
 
-        <p class="subtitle">
-            A cinematic fan project dedicated to Sasuke Uchiha.
-        </p>
+            <h1 class="hero-title">
+                THE LAST<br>UCHIHA
+            </h1>
 
-        <a href="#" class="enter-btn">
-            ENTER
-        </a>
+            <p class="hero-text">
+                A cinematic fan project dedicated to Sasuke Uchiha.
+            </p>
+
+            <a href="#story" class="hero-button">
+                ENTER
+            </a>
+
+        </div>
 
     </section>
 
     <!-- STORY -->
 
-    <section class="content-section" id="story">
+    <section class="section" id="story">
 
         <h2>STORY</h2>
 
         <p>
-            Discover the journey of Sasuke Uchiha from the Uchiha Clan tragedy
-            to becoming one of the strongest shinobi.
+            Explore Sasuke Uchiha's journey from the fall of the Uchiha Clan
+            to becoming one of the strongest shinobi in history.
         </p>
 
     </section>
 
     <!-- ABILITIES -->
 
-    <section class="content-section" id="abilities">
+    <section class="section" id="abilities">
 
         <h2>ABILITIES</h2>
 
         <p>
-            Sharingan, Mangekyō Sharingan, Eternal Mangekyō,
-            Rinnegan, Chidori, Susanoo and many more.
+            Sharingan • Mangekyō Sharingan • Eternal Mangekyō •
+            Rinnegan • Chidori • Kirin • Susanoo • Amenotejikara
         </p>
 
     </section>
 
     <!-- TIMELINE -->
 
-    <section class="content-section" id="timeline">
+    <section class="section" id="timeline">
 
         <h2>TIMELINE</h2>
 
-        <p>
-            Follow Sasuke's life from childhood to Boruto.
-        </p>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                Childhood
+            </div>
+
+            <div class="timeline-item">
+                Team 7
+            </div>
+
+            <div class="timeline-item">
+                Orochimaru
+            </div>
+
+            <div class="timeline-item">
+                Itachi
+            </div>
+
+            <div class="timeline-item">
+                Fourth Great Ninja War
+            </div>
+
+            <div class="timeline-item">
+                Boruto Era
+            </div>
+
+        </div>
 
     </section>
 
     <!-- GALLERY -->
 
-    <section class="content-section" id="gallery">
+    <section class="section" id="gallery">
 
         <h2>GALLERY</h2>
 
-        <p>
-            Cinematic screenshots and iconic moments.
-        </p>
+        <div class="gallery">
+
+            <div class="card">Image 1</div>
+            <div class="card">Image 2</div>
+            <div class="card">Image 3</div>
+            <div class="card">Image 4</div>
+
+        </div>
 
     </section>
 
     <!-- QUOTES -->
 
-    <section class="content-section" id="quotes">
+    <section class="section" id="quotes">
 
         <h2>QUOTES</h2>
 
-        <p>
-            "I have long since closed my eyes... My only goal is in the darkness."
-        </p>
+        <blockquote>
+
+            "I have long since closed my eyes...
+            My only goal is in the darkness."
+
+        </blockquote>
 
     </section>
+
+    <footer>
+
+        <p>
+            ROTMANS © 2026 • Fan Project
+        </p>
+
+    </footer>
 
     <script src="script.js"></script>
 
