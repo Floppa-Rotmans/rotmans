@@ -307,4 +307,26 @@ body::after{
 
     color:#777;
 
+}/* ===== JavaScript ===== */
+
+.hero-content{
+
+opacity:0;
+
+transform:translateY(35px);
+
+transition:1.2s;
+
+}
+
+.scroll{
+
+transition:.9s;
+
+}
+
+.hero-button{
+
+transition:.35s;
+
 }
